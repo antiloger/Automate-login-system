@@ -6,8 +6,6 @@ import time
 import csvrw
 
 
-
-
 def read(domain):
     driver = webdriver.Chrome()
     data_set = csvrw.readcsv()
@@ -26,6 +24,7 @@ def read(domain):
         action.perform()
         driver.implicitly_wait(5)
         time.sleep(2)
+
 
 def cdm_ui():
     print("+---NSBM QR---+")
@@ -59,9 +58,11 @@ def run():
             read(url)
             break
 
-cdm_ui()
+
+if __name__ == "__main__":
+    cdm_ui()
 
 
 
 
-#http://10.10.10.227/?id=1734700
+
